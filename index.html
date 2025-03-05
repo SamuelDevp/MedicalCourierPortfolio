@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Courier Expert</title>
+        <script src="https://unpkg.com/tailwindcss-cdn@3.3.4/tailwindcss.js"></script>
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" media="all" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-blue-900 text-white transform -translate-x-full transition-transform duration-300 z-50">
+        <button onclick="toggleSidebar()" class="absolute top-4 right-4 text-white text-2xl">&times;</button>
+        <ul class="mt-16 space-y-6 text-center">
+            <li><a href="#home" class="block py-2 hover:bg-blue-700">Home</a></li>
+            <li><a href="#about" class="block py-2 hover:bg-blue-700">About</a></li>
+            <li><a href="#services" class="block py-2 hover:bg-blue-700">Services</a></li>
+            <li><a href="#process" class="block py-2 hover:bg-blue-700">Process</a></li>
+            <li><a href="#experience" class="block py-2 hover:bg-blue-700">Experience</a></li>
+            <li><a href="#reviews" class="block py-2 hover:bg-blue-700">Reviews</a></li>
+            <li><a href="#contact" class="block py-2 hover:bg-blue-700">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full z-40">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-3xl font-bold">Kelly Natalie</h1>
+            <button onclick="toggleSidebar()" class="text-white text-2xl">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="flex flex-col items-center text-center py-32 bg-blue-100">
+        <h2 class="text-4xl font-bold text-blue-800">Reliable & Fast Medical Courier Services</h2>
+        <p class="mt-2 text-gray-700 text-lg">Delivering with care and precision.</p>
+        <img src="./img/IMG-20250305-WA0169.jpg" alt="Medical Courier" class="mt-6 w-80 rounded-full shadow-lg">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-20 px-6">
+        <h2 class="text-3xl font-bold text-blue-800 text-center">Ab<span class="border-b-2 border-blue-800">out Me</span></h2>
+        <p class="text-gray-700 mt-4 text-center">
+            I specialize in Non-Emergency Medical Transportation (NEMT) contracts. As an NEMT consultant at Medcompass Medical Transportation, I provide expert guidance to ensure safe and efficient patient transport services.
+        </p>
+        
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-200 py-20 px-6">
+        <h2 class="text-3xl font-bold text-blue-800 text-center">My S<span class="border-b-2 border-blue-800">ervice</span></h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white shadow-lg p-6 rounded-lg text-center">
+                <h3 class="text-xl font-bold">Medical Sample Delivery</h3>
+                <p class="text-gray-700 mt-2">Safe transport of blood samples, lab specimens, and medical documents.</p>
+            </div>
+            <div class="bg-white shadow-lg p-6 rounded-lg text-center">
+                <h3 class="text-xl font-bold">Emergency Medical Supplies</h3>
+                <p class="text-gray-700 mt-2">Fast and reliable delivery of emergency medical kits.</p>
+            </div>
+            <div class="bg-white shadow-lg p-6 rounded-lg text-center">
+                <h3 class="text-xl font-bold">Pharmacy Deliveries</h3>
+                <p class="text-gray-700 mt-2">Ensuring timely and accurate medication deliveries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="container mx-auto py-20 px-6">
+        <h2 class="text-3xl font-bold text-blue-800 text-center">How <span class="border-b-2 border-blue-800">It Works</span></h2>
+        <div class="mt-6 flex flex-col items-center space-y-4">
+            <p class="text-gray-700"><strong>Step 1:</strong> You place an order for medical delivery.</p>
+            <p class="text-gray-700"><strong>Step 2:</strong> We securely collect the package.</p>
+            <p class="text-gray-700"><strong>Step 3:</strong> Our team ensures safe and timely delivery.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-gray-200 py-20 px-6">
+        <h2 class="text-3xl font-bold text-blue-800 text-center">My Exp<span class="border-b-2 border-blue-800">erience</span></h2>
+        <div class="text-center text-gray-700 mt-6">
+            <p>🚀 <strong>5+ Years Experience</strong> in Medical Courier Services.</p>
+            <p>🏅 Certified in Medical Logistics and Safe Handling.</p>
+            <p>🔬 Trusted by hospitals and labs across the country.</p>
+        </div>
+    </section>
+
+<!-- Reviews Section -->
+<section id="reviews" class="py-20 px-6 bg-gray-100">
+    <h2 class="text-3xl font-bold text-blue-800 text-center">What Cli<span class="border-b-2 border-blue-800">ents Say</span></h2>
+    <div class="relative max-w-xl mx-auto mt-10">
+        <div id="review-slider" class="bg-white shadow-lg p-6 rounded-lg text-center transition-opacity duration-500">
+            <p class="text-gray-700 text-lg" id="review-text">"Highly reliable service. Always on time!"</p>
+            <h4 class="font-bold text-blue-700 mt-4" id="review-author">– John D.</h4>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between mt-4">
+            <button onclick="prevReview()" class="bg-blue-600 text-white px-4 py-2 rounded-full">&larr;</button>
+            <button onclick="nextReview()" class="bg-blue-600 text-white px-4 py-2 rounded-full">&rarr;</button>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+<section id="contact" class="container mx-auto py-20 px-6">
+    <h2 class="text-3xl font-bold text-blue-800 text-center">Con<span class="border-b-2 border-blue-800">tact Me</span></h2>
+    <div class="text-center text-gray-700 mt-6">
+        <p><strong>Email:</strong> <a href="mailto:kellynatalie79@gmail.com" class="text-blue-600">kellynatalie79@gmail.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/16135157569" class="text-blue-600">+1 613-515-7569</a></p>
+    </div>
+    <form class="mt-6 max-w-lg mx-auto bg-white p-6 shadow-lg rounded-lg">
+        <input type="text" placeholder="Your Name" class="w-full p-2 border border-gray-300 rounded-lg mb-4">
+        <input type="email" placeholder="Your Email" class="w-full p-2 border border-gray-300 rounded-lg mb-4">
+        <textarea placeholder="Your Message" class="w-full p-2 border border-gray-300 rounded-lg mb-4"></textarea>
+        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg w-full">Send Message</button>
+    </form>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-6 text-center">
+        <p>&copy; 2025 Medical Courier. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("-translate-x-full");
+        }
+        
+    const reviews = [
+        { text: '"Highly reliable service. Always on time!"', author: "– John D." },
+        { text: '"Professional and trustworthy. Highly recommend!"', author: "– Jane S." },
+        { text: '"Very efficient and courteous. Will use again!"', author: "– Michael R." },
+        { text: '"Exceptional service! They truly care about clients."', author: "– Sarah W." }
+    ];
+
+    let currentReview = 0;
+
+    function updateReview() {
+        document.getElementById("review-text").textContent = reviews[currentReview].text;
+        document.getElementById("review-author").textContent = reviews[currentReview].author;
+    }
+
+    function nextReview() {
+        currentReview = (currentReview + 1) % reviews.length;
+        updateReview();
+    }
+
+    function prevReview() {
+        currentReview = (currentReview - 1 + reviews.length) % reviews.length;
+        updateReview();
+    }
+
+    setInterval(nextReview, 5000); // Auto-slide every 5 seconds
+    </script>
+
+</body>
+</html>
